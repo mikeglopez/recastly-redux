@@ -28,6 +28,10 @@ export default class App extends React.Component {
     this.setState({currentVideo: video});
   }
 
+  handleSearchInputChange(value) {
+
+  }
+
   getYouTubeVideos(query) {
     var options = {
       key: this.props.API_KEY,
@@ -49,7 +53,7 @@ export default class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <Search handleSearchInputChange={handleSearchInputChange}/>
+            <Search handleSearchInputChange={this.handleSearchInputChange}/>
           </div>
         </nav>
         <div className="row">
